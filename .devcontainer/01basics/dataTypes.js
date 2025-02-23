@@ -1,22 +1,26 @@
 console.log("In this tutorial we will learn data types")
 
-let a = 2; //variable declared with let cannot be redeclared by using let but can be done by 'var' or w/o keyword
+let a = 2; //variable declared with let cannot be redeclared in same scope by using let but can be done by 'var' or w/o keyword
 //let a = 5 is not allowed
 //var a = 6 & a = 7 is allowed
 let b = 3;
 let c = (a+b)
 
+
 console.log("Value of c =",c)
-//redeclaring a & b w/o using let
-a = 6
-b = 4
 
-console.log(a,b)
+function MyFunction(){
+    let x = 9
+    var y = 3
+    z = x*y
+    let yes = true
+    let no = false
 
-var x = 2;
-var y = 5;
-let z = (x+y+c)
+    console.log("Product of x & y =",z)
+    if (z > 10)
+        console.log(yes)
+    else
+    console.log(no)
+}
 
-
-console.log("Value of updated x ",x)
-console.log("Value of z =",z)
+MyFunction();
